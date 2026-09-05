@@ -27,15 +27,17 @@
 
   <main class="container policy">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 31, 2026</p>
+    <p class="updated">Last updated: September 5, 2026</p>
 
     <div class="summary-box">
       <p>
-        <strong>In short:</strong> Recaho Extender does not track your browsing, does not use
-        analytics or advertising trackers, and never sells your data. The extension imports order
-        and dispatch information from the Recaho POS account you're already logged into, so it can
-        be shown on your dispatch board and passed to the delivery rider it's assigned to in the
-        Recaho Extender Companion app. That's the only data it handles.
+        <strong>In short:</strong> Recaho Extender does not track your general browsing, shows no
+        ads, and never sells your data. It handles three things: (1) the order and dispatch
+        information it imports from the Recaho POS account you're already logged into, so it can be
+        shown on your dispatch board and passed to the assigned rider; (2) your
+        <strong>email address</strong>, used only to sign you in with a one-time code; and
+        (3) <strong>anonymous usage statistics</strong> about how the extension itself is used, to
+        help improve it. Each of these is explained in full below.
       </p>
     </div>
 
@@ -53,14 +55,41 @@
       <a href="mailto:sabin.sth44@gmail.com">sabin.sth44@gmail.com</a>.
     </p>
 
+    <h2>Your email address and sign-in</h2>
+    <p>
+      To use the extension you sign in with your email address. We send a six-digit one-time code to
+      that address, and you enter the code to confirm it's you. This is the only way the extension
+      identifies your account and knows which stores belong to you.
+    </p>
+    <ul>
+      <li><strong>What is collected:</strong> your email address, and a sign-in token issued after
+          you enter the correct code.</li>
+      <li><strong>Why:</strong> solely to authenticate you and link your account to the stores whose
+          dispatch boards you are allowed to see. Without it there is no way to keep one merchant's
+          orders separate from another's.</li>
+      <li><strong>Where it goes:</strong> your email is sent over an encrypted (HTTPS) connection to
+          our order service at <code>recaho-helper-api.onrender.com</code>, where the account record
+          is stored.</li>
+      <li><strong>Consent:</strong> before you type your email, the extension shows a notice
+          explaining this and asks you to tick a box to agree. Nothing is sent until you do.</li>
+      <li><strong>What we never do with it:</strong> we do not sell it, share it with third parties,
+          use it for advertising, or send you marketing email. The only email you receive is the
+          sign-in code you requested.</li>
+      <li><strong>Removal:</strong> you can request deletion of your account and email address at any
+          time — see "Your rights and choices" below.</li>
+    </ul>
+    <p>
+      Signing out from the extension clears the stored sign-in token from your browser.
+    </p>
+
     <h2>What data the extension processes</h2>
     <p>
       When you use Recaho Extender on your Recaho POS pages, it reads and imports the following
       information, using your own logged-in POS session, in order to build your dispatch board:
     </p>
     <ul>
-      <li>Order details (items, order ID, order time, order status)</li>
-      <li>Customer delivery information attached to the order (e.g. name, address, phone number), as already present in your Recaho POS</li>
+      <li>Order details (items, order ID, order time, order status, payment status, amounts)</li>
+      <li>Customer delivery information attached to the order (e.g. name, address, phone number, email), as already present in your Recaho POS</li>
       <li>Delivery photos you choose to attach to an order (e.g. proof of pickup or delivery)</li>
       <li>Rider assignments you make (which rider is assigned to which order)</li>
     </ul>
@@ -69,6 +98,30 @@
       available to the specific rider it is assigned to in the Recaho Extender Companion app. It is
       not read from, or applied to, any site other than your Recaho POS.
     </p>
+    <p>
+      Order data is only uploaded when you choose to upload it. The extension shows you exactly what
+      will change before anything is sent, and nothing is transmitted until you confirm.
+    </p>
+
+    <h2>Usage analytics</h2>
+    <p>
+      To understand which features are used and where the extension is failing, we record anonymous
+      usage statistics using <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a>,
+      an analytics provider. This data is sent to PostHog's servers in the United States.
+    </p>
+    <ul>
+      <li><strong>What is recorded:</strong> interactions with the extension's own settings popup,
+          and product events such as an upload being performed, together with a randomly generated
+          identifier stored on your device.</li>
+      <li><strong>What is not recorded:</strong> we do not enable session recording, and we do not
+          send customer names, phone numbers, addresses, order contents, or the web addresses of the
+          pages you visit. Analytics on your Recaho POS pages is limited to explicit product events
+          only — the page's content and URL are deliberately stripped before anything is sent.</li>
+      <li><strong>Identifier:</strong> the identifier is a random value created on your device. It is
+          not your email address and is not derived from it.</li>
+      <li><strong>What it is never used for:</strong> advertising, profiling, or sale to third
+          parties.</li>
+    </ul>
 
     <h2>What the mobile app processes</h2>
     <p>
@@ -80,31 +133,35 @@
 
     <h2>What we don't do</h2>
     <ul>
-      <li>We don't collect analytics, usage tracking, or advertising identifiers.</li>
+      <li>We don't track your general browsing or your activity on sites unrelated to the Service.</li>
+      <li>We don't use advertising identifiers, ad networks, or any form of ad targeting.</li>
       <li>We don't sell, rent, or share your data with third parties for marketing or advertising.</li>
-      <li>We don't read or import data from any website other than the Recaho POS pages the extension is designed for.</li>
+      <li>We don't read or import order data from any website other than the Recaho POS pages the extension is designed for.</li>
       <li>We don't store your Recaho POS login credentials — the extension uses your existing, already-authenticated browser session.</li>
+      <li>We don't record your screen or capture your keystrokes.</li>
     </ul>
 
     <h2>How data is stored and secured</h2>
     <p>
-      Imported order and dispatch data is transmitted over encrypted (HTTPS) connections and stored
-      only for as long as needed to operate the dispatch and delivery workflow — for example, so a
-      completed order's status and photo remain visible on your dispatch board. You can request
-      deletion of your data at any time by contacting
+      Imported order and dispatch data, and your account email, are transmitted over encrypted
+      (HTTPS) connections and stored only for as long as needed to operate the dispatch and delivery
+      workflow — for example, so a completed order's status and photo remain visible on your dispatch
+      board. You can request deletion of your data at any time by contacting
       <a href="mailto:sabin.sth44@gmail.com">sabin.sth44@gmail.com</a>.
     </p>
 
     <h2>Data sharing</h2>
     <p>
       Order and delivery data is only shared between your dispatch board (Chrome extension) and the
-      specific rider assigned to that order (via the Companion app). It is not shared with any other
-      third party.
+      specific rider assigned to that order (via the Companion app). The only other third party
+      involved is our analytics provider, PostHog, which receives the anonymous usage statistics
+      described above and no order or customer data.
     </p>
 
     <h2>Your rights and choices</h2>
     <ul>
-      <li>You can request access to, correction of, or deletion of data associated with your account.</li>
+      <li>You can request access to, correction of, or deletion of data associated with your account, including your email address.</li>
+      <li>You can decline the sign-in notice and simply not use the extension — no email is collected unless you agree to it.</li>
       <li>You can uninstall the Chrome extension or delete the mobile app at any time to stop all data processing.</li>
       <li>You can contact us with any privacy request at <a href="mailto:sabin.sth44@gmail.com">sabin.sth44@gmail.com</a>.</li>
     </ul>
